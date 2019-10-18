@@ -24,7 +24,7 @@ None
 
 ## License
 
-MIT/BSD
+[MIT](https://opensource.org/licenses/MIT)/[BSD](https://opensource.org/licenses/BSD-3-Clause)
 
 ## Author Information
 
