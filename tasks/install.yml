@@ -1,5 +1,8 @@
 # roles/usbguard/tasks/install.yml
 ---
+- name: Include OS-specific variables.
+  include_vars: "{{ ansible_os_family }}.yml"
+
 - name: Make sure package repository is installed
   package:
     name: "{{ usbguard_repository }}"
