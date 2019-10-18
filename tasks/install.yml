@@ -1,0 +1,17 @@
+# roles/usbguard/tasks/install.yml
+---
+- name: Make sure package repository is installed
+  package:
+    name: "{{ usbguard_repository }}"
+    state: present
+
+- name: Make sure usbguard is installed
+  package:
+    name: "{{ usbguard_package }}"
+    state: present
+
+- name: Make sure usbguard is running and enabled on boot
+  service:
+    name: usbguard
+    state: started
+    enabled: yes
