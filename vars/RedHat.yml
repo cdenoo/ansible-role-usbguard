@@ -1,0 +1,7 @@
+# Vars file for cdenoo.usbguard
+---
+usbguard_repository:
+  - epel-release
+
+usbguard_package:
+  - usbguard
