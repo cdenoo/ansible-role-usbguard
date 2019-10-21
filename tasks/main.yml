@@ -1,4 +1,3 @@
-# roles/usbguard/tasks/install.yml
 ---
 - name: Include OS-specific variables.
   include_vars: "{{ ansible_os_family }}.yml"
@@ -18,3 +17,6 @@
     name: usbguard
     state: started
     enabled: yes
+
+- name: Allow keyboards-only usb interfaces
+  command: allow with-interface one-of { 03:00:01 03:01:01 } if !allowed-matches(with-interface one-of { 03:00:01 03:01:01 })
