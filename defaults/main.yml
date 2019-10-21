@@ -1,27 +1,27 @@
 ---
 usbguard_rulefile: /etc/usbguard/rules.conf
 
-ImplicitPolicyTarget: block
+usbguard_ImplicitPolicyTarget: block
 
-PresentDevicePolicy: apply-policy
+usbguard_PresentDevicePolicy: apply-policy
 
-PresentControllerPolicy: keep
+usbguard_PresentControllerPolicy: keep
 
-InsertedDevicePolicy: apply-policy
+usbguard_InsertedDevicePolicy: apply-policy
 
-RestoreControllerDeviceState: false
+usbguard_RestoreControllerDeviceState: false
 
-DeviceManagerBackend: uevent
+usbguard_DeviceManagerBackend: uevent
 
-IPCAllowedUsers: root
+usbguard_IPCAllowedUsers: root
 
+# Space delimited list of IPC allowed groups
+# usbguard_IPCAllowedGroups: []
 
-# IPCAllowedGroups: []
+usbguard_IPCAccessControlFiles: /etc/usbguard/IPCAccessControl.d/
 
-IPCAccessControlFiles: /etc/usbguard/IPCAccessControl.d/
+usbguard_DeviceRulesWithPort: false
 
-DeviceRulesWithPort: false
+usbguard_AuditBackend: FileAudit
 
-AuditBackend: FileAudit
-
-AuditFilePath: /var/log/usbguard/usbguard-audit.log
+usbguard_AuditFilePath: /var/log/usbguard/usbguard-audit.log
