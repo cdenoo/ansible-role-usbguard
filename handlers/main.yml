@@ -1,0 +1,5 @@
+---
+- name: restart USBGuard
+  service:
+    name: usbguard
+    state: restarted
