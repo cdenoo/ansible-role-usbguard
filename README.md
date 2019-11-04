@@ -8,7 +8,21 @@ None
 
 ## Role Variables
 
-None (yet)
+| Variable                              | Default                              | Description                                     |
+| :------------------------------------ | :----------------------------------- | :---------------------------------------------- |
+| usbguard_rulefile                     | /etc/usbguard/rules.conf             | Location of the usbguard file containing rules  |
+| usbguard_ImplicitPolicyTarget         | block                                | Default policy to be enforced                   |
+| usbguard_PresentDevicePolicy          | apply-policy                         | Policy to be applied to already present devices |
+| usbguard_PresentControllerPolicy      | keep                                 | Policy to be applied to controllers             |
+| usbguard_InsertedDevicePolicy         | apply-policy                         |                                                 |
+| usbguard_RestoreControllerDeviceState | false                                |                                                 |
+| usbguard_DeviceManagerBackend         | uevent                               |                                                 |
+| usbguard_IPCAllowedUsers              | root                                 |                                                 |
+| usbguard_IPCAllowedGroups             | ""                                   |                                                 |
+| usbguard_IPCAccessControlFiles        | /etc/usbguard/IPCAccessControl.d/    |                                                 |
+| usbguard_DeviceRulesWithPort          | false                                |                                                 |
+| usbguard_AuditBackend                 | FileAudit                            |                                                 |
+| usbguard_AuditFilePath                | /var/log/usbguard/usbguard-audit.log |                                                 |
 
 ## Dependencies
 
